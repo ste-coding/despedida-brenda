@@ -41,11 +41,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
-      content="https://matheussilvasantiagou.github.io/despedida-brenda/assets/convite.jpg"
+      content="https://ste-coding.github.io/despedida-brenda/assets/convite.jpg"
     />
     <link
       rel="canonical"
-      href="https://matheussilvasantiagou.github.io/despedida-brenda/"
+      href="https://ste-coding.github.io/despedida-brenda/"
     />
     <meta name="theme-color" content="#80011f" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -242,7 +242,6 @@
           inset -2px -3px 6px rgba(0, 0, 0, 0.25);
       }
 
-      /* Traço fino estilo desenho do convite */
       /* --- FUNDO: campo vinho + taças em traço fino --- */
       #bgRedField {
         position: absolute;
@@ -267,6 +266,7 @@
         background-repeat: no-repeat, no-repeat, repeat;
       }
 
+      /* Traço fino estilo desenho do convite */
       .doodle-frame {
         border: 2px solid rgba(193, 17, 46, 0.55);
         box-shadow: 0 0 0 6px rgba(255, 247, 246, 0.65);
@@ -447,12 +447,7 @@
         height: 100%;
         width: 0%;
         border-radius: inherit;
-        background: linear-gradient(
-          90deg,
-          #c1112e,
-          #ff8f9c 55%,
-          #feecec 100%
-        );
+        background: linear-gradient(90deg, #c1112e, #ff8f9c 55%, #feecec 100%);
         transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1);
       }
       #pageLoader .page-loader-heading {
@@ -531,7 +526,7 @@
       </div>
     </div>
 
-    <!-- Fundo: se existir ./assets/video.MOV ele toca; senão fica a arte do convite (poster) -->
+    <!-- Fundo: campo vinho com taças; se existir ./assets/video.MOV ele entra por cima -->
     <div
       id="bgVideoShell"
       class="pointer-events-none fixed left-0 right-0 top-0 z-0 w-full overflow-hidden"
@@ -860,7 +855,8 @@
             <p
               class="mt-3 font-body text-sm leading-relaxed text-on-surface-variant"
             >
-              Faça o Pix pra irmã da noiva e, depois, é só enviar o comprovante pra Bruna no WhatsApp.
+              Faça o Pix pra irmã da noiva e, depois, é só enviar o comprovante
+              pra Bruna no WhatsApp.
             </p>
           </div>
         </article>
@@ -890,7 +886,11 @@
                 class="flex items-baseline gap-3 font-invite text-2xl font-semibold leading-snug text-primary md:text-3xl"
               >
                 <span aria-hidden="true">📍</span>
-                <span>Salão de festas — Direcional Praia - R. Cap. Médio Osias Ribeiro, 320 - Barra de Jangada, Jaboatão dos Guararapes - PE, 54460-020</span>
+                <span
+                  >Salão de festas — Direcional Praia - R. Cap. Médio Osias
+                  Ribeiro, 320 - Barra de Jangada, Jaboatão dos Guararapes - PE,
+                  54460-020</span
+                >
               </li>
               <li
                 class="flex items-baseline gap-3 font-invite text-2xl font-semibold leading-snug text-primary md:text-3xl"
@@ -942,7 +942,16 @@
             </li>
             <li class="flex gap-3">
               <span aria-hidden="true">📱</span>
-              <span>Envie o comprovante do Pix no grupo.</span>
+              <span>
+                Envie o comprovante do Pix para a
+                <a
+                  href="https://wa.me/5581999883070?text=Oi%2C%20Bruna!%20Fiz%20o%20Pix%20da%20contribui%C3%A7%C3%A3o%20para%20o%20presente%20da%20Brenda.%20Segue%20o%20comprovante%3A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-bold text-secondary underline decoration-secondary/40 underline-offset-4 transition hover:decoration-secondary"
+                  >Bruna no WhatsApp</a
+                >.
+              </span>
             </li>
             <li class="flex gap-3">
               <span aria-hidden="true">🥂</span>
@@ -974,8 +983,8 @@
         <p
           class="font-body text-lg text-on-surface-variant max-w-lg mx-auto mb-10 relative z-10"
         >
-          Brenda merece ter todas as pessoas especiais por perto nesse
-          momento. Confirme entrando no grupo do WhatsApp e venha celebrar essa nova fase
+          Brenda merece ter todas as pessoas especiais por perto nesse momento.
+          Confirme entrando no grupo do WhatsApp e venha celebrar essa nova fase
           com a gente.
         </p>
         <div
@@ -1001,6 +1010,23 @@
             TALVEZ
           </button>
         </div>
+
+        <!-- Fada madrinha -->
+        <p
+          class="relative z-10 mt-10 font-body text-base leading-relaxed text-on-surface-variant"
+        >
+          Ficou com dúvidas? Manda mensagem pra fada madrinha:
+        </p>
+        <a
+          id="linkFadaMadrinha"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="relative z-10 mt-3 inline-flex items-center justify-center gap-2 rounded-full border-2 border-secondary/40 bg-white px-7 py-3 font-label text-sm font-extrabold text-secondary transition hover:bg-secondary/5 active:scale-[0.98]"
+        >
+          <span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+          Falar no grupo do WhatsApp
+        </a>
       </section>
 
       <!-- Convite original -->
@@ -1194,7 +1220,8 @@
         /* ==================================================================
            EDITE AQUI: link do grupo de WhatsApp da despedida
            ================================================================== */
-        var WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/HWu9u2fxvq98KuVd1XiL0o";
+        var WHATSAPP_GROUP_URL =
+          "https://chat.whatsapp.com/HWu9u2fxvq98KuVd1XiL0o";
 
         function openWhatsappHint() {
           whatsappHintModal.classList.remove("hidden");
@@ -1215,6 +1242,10 @@
         }
 
         btnConfirmar.addEventListener("click", openWhatsappHint);
+
+        // Link da "fada madrinha" aponta para o mesmo grupo
+        var linkFada = document.getElementById("linkFadaMadrinha");
+        if (linkFada) linkFada.href = WHATSAPP_GROUP_URL;
 
         whatsappHintModal
           .querySelectorAll("[data-close-whatsapp-hint]")
